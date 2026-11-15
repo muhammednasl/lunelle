@@ -1,0 +1,62 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-brand-green: #7C8B73;
+  --color-brand-ivory: #FAF9F6;
+  --color-brand-blush: #D9AAA7;
+  --color-brand-olive: #3F4B3C;
+
+  --font-heading: "Bodoni Moda", serif;
+  --font-body: "DM Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: #FAF9F6;
+  color: #3F4B3C;
+  font-family: "DM Sans", sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: "Bodoni Moda", serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+/* Infinite Gallery Animation */
+
+.gallery-track {
+  animation: gallery-scroll 45s linear infinite;
+}
+
+.gallery-slider:hover .gallery-track {
+  animation-play-state: paused;
+}
+
+@keyframes gallery-scroll {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-track {
+    animation: none;
+  }
+}
