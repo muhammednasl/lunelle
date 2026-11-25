@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { name: "Home", href: "#home" },
-  { name: "About Us", href: "#about" },
-  { name: "Menu", href: "#menu" },
-  { name: "Locations", href: "#locations" },
-  { name: "Gallery", href: "#gallery" },
-  { name: "Contact Us", href: "#contact" },
+  { name: "Home", href: "/" },
+  { name: "About Us", href: "/about" },
+  { name: "Menu", href: "/menu" },
+  { name: "Gallery", href: "/gallery" },
+  { name: "Contact Us", href: "/contact" },
 ];
 
 import {
@@ -23,7 +22,7 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-[1440px] items-center justify-between px-5 py-4 sm:px-8 lg:px-12">
 
         {/* Logo */}
-        <a href="#home" onClick={() => setIsOpen(false)}>
+        <a href="/" onClick={() => setIsOpen(false)}>
           <img
             src="/lunelle.png"
             alt="Cafe Lunelle"
